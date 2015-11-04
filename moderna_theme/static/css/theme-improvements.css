@@ -1,0 +1,75 @@
+/*This document includes Kattare-created rules for the Moderna theme. For colors in this theme, see under skins/.. */
+
+
+/*******************
+style.css overrides
+*********************/
+body {
+	font-weight: normal;
+}
+
+/*fixes position with the logo if logo is used*/
+header .navbar-collapse  ul.navbar-nav {
+	position: relative;
+	top: 22px;
+}
+
+.box {
+	margin-bottom: 33px;
+}
+
+/*fixes weird borders at small screens*/
+@media (max-width: 767px) {
+	.box {
+		border: none;
+	}
+}
+
+
+/************************
+New stuff
+*************************/
+
+/*if used*/
+.logo {
+	width: 145px;
+	padding: 20px 0 12px 12px;
+}
+
+/*allows testimonial bubble corner*/
+.box-gray {
+	position: relative;
+}
+
+/*testimonial bubble corner*/
+.testimonial::after {
+	background-color: inherit;
+	content: '';
+	display: block;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	bottom: -15px;
+	right: 80px;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.leading_quotation_mark {
+	font-size: 48px;
+	display: block;
+	float: left;
+	margin-right: 12px;
+	
+}
+.quote {
+	padding-top: 6px;
+	margin-right: 138px;
+}
+.quote p {
+	text-align: right;
+}
+
+
+

@@ -1,0 +1,278 @@
+{% extends "base.html" %}
+{% load i18n  mezzanine_tags staticfiles%}
+{% block meta_title %}{% trans "Home" %}{% endblock %}
+{% block title %}{% trans "Home" %}{% endblock %}
+{% block breadcrumb_wrapper %}
+{% endblock %}
+
+{% block title_wrapper %}
+{% endblock %}
+
+{% block breadcrumb_menu %}
+<li class="active">{% trans "Home" %}</li>
+{% endblock %}
+
+
+{% block all_content %}
+	<section id="{% block section_id %}featured{% endblock %}">
+		{% block left_wrapper %}{% endblock %}
+
+		{% block main_wrapper %}
+			<div class="col-md-{% block main_col_size %}none{% endblock %} {% block main_class %}{% endblock %}">
+				{% block main %}
+					<!-- start container for slider -->
+						<div class="container">
+							<div class="row">
+								<div class="col-lg-12">
+									<!-- Slider -->
+					        <div id="main-slider" class="flexslider">
+				            <ul class="slides">
+				              <li>
+				                <img src="{% static "img/slides/1.jpg" %}" alt="" />
+				                <div class="flex-caption">
+				                    <h3>Raw Dog Food</h3> 
+														<p>With the right premix, a homemade diet is no longer guess-work.</p> 
+															<a href="#" class="btn btn-theme">Learn More</a>
+				                </div>
+				              </li>
+				              <li>
+				                <img src="{% static "img/slides/2.jpg" %}" alt="" />
+				                <div class="flex-caption">
+				                  <h3>Raw Cat Food</h3> 
+													<p>Make a homemade diet a reality with TCFeline premix.</p> 
+													<a href="#" class="btn btn-theme">Learn More</a>
+				                </div>
+				              </li>
+				              <li>
+				                <img src="{% static "img/slides/3.jpg" %}" alt="" />
+				                <div class="flex-caption">
+				                  <h3>Toys &amp; Treats</h3> 
+													<p>Enrich your relationship with your special friend or companion.</p> 
+													<a href="#" class="btn btn-theme">Learn More</a>
+				                </div>
+				              </li>
+				            </ul>
+					        </div>
+									<!-- end slider -->
+								</div><!--end col-->
+							</div>
+						</div><!--end container-->
+				{% endblock main %}
+			</div>
+		{% endblock main_wrapper%}
+
+		{% block right_wrapper %}
+		{% endblock %}
+	</section>
+	<section class="callaction">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="big-cta">
+						<div class="cta-text">
+							<h2><span>Raw Meat Pet Food.</span> The best for your pets.</h2>
+							<p class="col-md-10 col-md-offset-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="content">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="row">
+						<div class="col-md-6 col-lg-3">
+							<div class="box">
+								<div class="box-gray aligncenter">
+									<img src="">
+									<h4>TCfeline 'beFree' PLUS Chicken</h4>
+									<!-- <div class="icon">
+									<i class="fa fa-desktop fa-3x"></i>
+									</div> -->
+									<p class="">
+									 Voluptatem accusantium doloremque laudantium sprea totam rem aperiam.
+									</p>
+										
+								</div>
+								<div class="box-bottom">
+									<a href="#">Learn more</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-3">
+							<div class="box">
+								<div class="box-gray aligncenter">
+									<h4>TCfeline Original Raw Diet Premix</h4>
+									<!-- <div class="icon">
+									<i class="fa fa-pagelines fa-3x"></i>
+									</div> -->
+									<p>
+									 Voluptatem accusantium doloremque laudantium sprea totam rem aperiam.
+									</p>
+										
+								</div>
+								<div class="box-bottom">
+									<a href="#">Learn more</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-3">
+							<div class="box">
+								<div class="box-gray aligncenter">
+									<h4>TCfeline PLUS Beef Liver</h4>
+									<!-- <div class="icon">
+									<i class="fa fa-edit fa-3x"></i>
+									</div> -->
+									<p>
+									 Voluptatem accusantium doloremque laudantium sprea totam rem aperiam.
+									</p>
+										
+								</div>
+								<div class="box-bottom">
+									<a href="#">Learn more</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-3">
+							<div class="box">
+								<div class="box-gray aligncenter">
+									<h4>Raw Meat Dog Food</h4>
+									<!-- <div class="icon">
+									<i class="fa fa-code fa-3x"></i>
+									</div> -->
+									<p>
+									 Voluptatem accusantium doloremque laudantium sprea totam rem aperiam.
+									</p>
+										
+								</div>
+								<div class="box-bottom">
+									<a href="#">Learn more</a>
+								</div>
+							</div><!--end box-->
+						</div>
+					</div>
+				</div>
+			</div><!--end row-->
+			<!-- divider -->
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="solidline">
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="big-cta">
+								<div class="cta-text">
+									<h2>Testimonials</h2>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="box">
+								<div class="box-gray testimonial">
+									<span class="leading_quotation_mark">&ldquo;</span><p>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+									quis nostrud exercitation.&rdquo;</p>
+								</div>
+								<div class="quote">
+									<p>- Sir Quote Alot<br>
+										Proud dog owner</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-6">
+							<div class="box">
+								<div class="box-gray testimonial">
+									<span class="leading_quotation_mark">&ldquo;</span><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+									quis nostrud exercitation.&rdquo;</p>
+								</div>
+								<div class="quote">
+									<p>- Ms Quote Alot<br>
+										Proud cat owner</p>
+								</div>
+							</div>
+						</div><!--end column-->
+					</div><!--end row-->
+				</div><!--end container-->
+			</div>
+
+
+			<!-- end divider -->
+			<!-- Portfolio Projects -->
+			<!-- <div class="row">
+				<div class="col-lg-12">
+					<h4 class="heading">Recent Works</h4>
+					<div class="row">
+						<section id="projects">
+						<ul class="portfolio" id="thumbs"> -->
+							<!-- Item Project and Filter Name -->
+							<!-- <li data-type="web" data-id="id-0" class="col-lg-3 design">
+							<div class="item-thumbs"> -->
+							<!-- Fancybox - Gallery Enabled - Title - Full Image -->
+							<!-- <a href="{% static "img/works/1.jpg" %}" title="Work 1" data-fancybox-group="gallery" class="hover-wrap fancybox">
+							<span class="overlay-img"></span>
+							<span class="overlay-img-thumb font-icon-plus"></span>
+							</a> -->
+							<!-- Thumb Image and Description -->
+							<!-- <img alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis." src="{% static "img/works/1.jpg" %}">
+							</div>
+							</li> -->
+							<!-- End Item Project -->
+							<!-- Item Project and Filter Name -->
+							<!-- <li data-type="icon" data-id="id-1" class="item-thumbs col-lg-3 design"> -->
+							<!-- Fancybox - Gallery Enabled - Title - Full Image -->
+							<!-- <a href="{% static "img/works/2.jpg" %}" title="Work 2" data-fancybox-group="gallery" class="hover-wrap fancybox">
+							<span class="overlay-img"></span>
+							<span class="overlay-img-thumb font-icon-plus"></span>
+							</a> -->
+							<!-- Thumb Image and Description -->
+							<!-- <img alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis." src="{% static "img/works/2.jpg" %}">
+							</li> -->
+							<!-- End Item Project -->
+							<!-- Item Project and Filter Name -->
+							<!-- <li data-type="illustrator" data-id="id-2" class="item-thumbs col-lg-3 photography"> -->
+							<!-- Fancybox - Gallery Enabled - Title - Full Image -->
+							<!-- <a href="{% static "img/works/3.jpg" %}" title="Work 3" data-fancybox-group="gallery" class="hover-wrap fancybox">
+							<span class="overlay-img"></span>
+							<span class="overlay-img-thumb font-icon-plus"></span>
+							</a> -->
+							<!-- Thumb Image and Description -->
+							<!-- <img alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis." src="{% static "img/works/3.jpg" %}">
+							</li> -->
+							<!-- End Item Project -->
+							<!-- Item Project and Filter Name -->
+							<!-- <li data-type="illustrator" data-id="id-2" class="item-thumbs col-lg-3 photography"> -->
+							<!-- Fancybox - Gallery Enabled - Title - Full Image -->
+							<!-- <a href="{% static "img/works/4.jpg" %}" title="Work 4" data-fancybox-group="gallery" class="hover-wrap fancybox">
+							<span class="overlay-img"></span>
+							<span class="overlay-img-thumb font-icon-plus"></span>
+							</a> -->
+							<!-- Thumb Image and Description -->
+							<!-- <img alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis." src="{% static "img/works/4.jpg" %}">
+							</li> -->
+							<!-- End Item Project -->
+						<!-- </ul>
+						</section>
+					</div>
+				</div> -->
+			</div>
+
+		</div>
+		</section>
+{% endblock all_content %}
