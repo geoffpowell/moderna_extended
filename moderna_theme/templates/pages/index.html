@@ -1,5 +1,5 @@
 {% extends "pages/richtextpage.html" %}
-{% load i18n staticfiles %}
+{% load i18n staticfiles mezzanine_tags %}
 
 {% block meta_title %}{% trans "Home" %}{% endblock %}
 {% block title %}{% trans "Home" %}{% endblock %}
@@ -23,45 +23,33 @@
 
 		{% block main %}
 			<!-- start container for slider -->
+			{% if page.homepage.slides %}
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
 						<!-- Slider -->
 		        <div id="main-slider" class="flexslider">
 	            <ul class="slides">
+	            	{% for slide in page.homepage.slides.all %}
 	              <li>
-	                <img src="{% static "img/slides/1.jpg" %}" alt="" />
+	                <img src="{{ MEDIA_URL }}{% thumbnail slide.image 1024 360 %}">
 	                <div class="flex-caption">
-	                    <h3>Raw Dog Food</h3> 
-											<p>With the right premix, a homemade diet is no longer guess-work.</p> 
+	                    <h3>{{ slide.caption_heading }}</h3> 
+											<p>{{ slide.caption_blurb }}</p> 
 												<a href="#" class="btn btn-theme">Learn More</a>
 	                </div>
 	              </li>
-	              <li>
-	                <img src="{% static "img/slides/2.jpg" %}" alt="" />
-	                <div class="flex-caption">
-	                  <h3>Raw Cat Food</h3> 
-										<p>Make a homemade diet a reality with TCFeline premix.</p> 
-										<a href="#" class="btn btn-theme">Learn More</a>
-	                </div>
-	              </li>
-	              <li>
-	                <img src="{% static "img/slides/3.jpg" %}" alt="" />
-	                <div class="flex-caption">
-	                  <h3>Toys &amp; Treats</h3> 
-										<p>Enrich your relationship with your special friend or companion.</p> 
-										<a href="#" class="btn btn-theme">Learn More</a>
-	                </div>
-	              </li>
+	              {% endfor %}
 	            </ul>
 		        </div>
 						<!-- end slider -->
 					</div><!--end col-->
 				</div>
 			</div><!--end container-->
+			{% endif %}
 
 			{# {{ block.super }} #}
-				<!--this seems to pull in stuff from the rich text field where I entered data in the admin. Notic that it is commented out for now.-->
+				<!--this seems to pull in stuff from the rich text field where I entered data in the admin. Notice that it is commented out for now.-->
 		{% endblock main %}
 
 		{% block right_wrapper %}
