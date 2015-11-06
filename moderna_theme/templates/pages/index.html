@@ -1,4 +1,4 @@
-{% extends "pages/richtextpage.html" %}
+{% extends "pages/page.html" %}
 {% load i18n staticfiles mezzanine_tags %}
 
 {% block meta_title %}{% trans "Home" %}{% endblock %}
@@ -74,81 +74,35 @@
 	</section><!--end section callaction-->
 	<section id="content">
 		<div class="container">
+			{% if page.homepage.features.all %}
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="row">
+						{% for feature in page.homepage.features.all %}
 						<div class="col-md-6 col-lg-3">
 							<div class="box">
 								<div class="box-gray aligncenter">
-									<img src="">
-									<h4>TCfeline 'beFree' PLUS Chicken</h4>
+									<!-- <img src=""> -->
+									<h4>{{ feature.caption_heading }}</h4>
+
 									<!-- <div class="icon">
 									<i class="fa fa-desktop fa-3x"></i>
 									</div> -->
 									<p class="">
-									 Voluptatem accusantium doloremque laudantium sprea totam rem aperiam.
+									 {{ feature.caption_blurb }}
 									</p>
 										
 								</div>
 								<div class="box-bottom">
-									<a href="#">Learn more</a>
+									<a href="{{ page.homepage.link.get_absolute_url }}">Learn more</a>
 								</div>
 							</div>
 						</div>
-						<div class="col-md-6 col-lg-3">
-							<div class="box">
-								<div class="box-gray aligncenter">
-									<h4>TCfeline Original Raw Diet Premix</h4>
-									<!-- <div class="icon">
-									<i class="fa fa-pagelines fa-3x"></i>
-									</div> -->
-									<p>
-									 Voluptatem accusantium doloremque laudantium sprea totam rem aperiam.
-									</p>
-										
-								</div>
-								<div class="box-bottom">
-									<a href="#">Learn more</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 col-lg-3">
-							<div class="box">
-								<div class="box-gray aligncenter">
-									<h4>TCfeline PLUS Beef Liver</h4>
-									<!-- <div class="icon">
-									<i class="fa fa-edit fa-3x"></i>
-									</div> -->
-									<p>
-									 Voluptatem accusantium doloremque laudantium sprea totam rem aperiam.
-									</p>
-										
-								</div>
-								<div class="box-bottom">
-									<a href="#">Learn more</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 col-lg-3">
-							<div class="box">
-								<div class="box-gray aligncenter">
-									<h4>Raw Meat Dog Food</h4>
-									<!-- <div class="icon">
-									<i class="fa fa-code fa-3x"></i>
-									</div> -->
-									<p>
-									 Voluptatem accusantium doloremque laudantium sprea totam rem aperiam.
-									</p>
-										
-								</div>
-								<div class="box-bottom">
-									<a href="#">Learn more</a>
-								</div>
-							</div><!--end box-->
-						</div>
+						{% endfor %}
 					</div>
 				</div>
 			</div><!--end row-->
+			{% endif %}
 			<!-- divider -->
 			<div class="row">
 				<div class="col-lg-12">
