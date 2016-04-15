@@ -3,7 +3,7 @@ from django.utils.translation import ugettext_lazy as _
 
 # Create your models here.
 from mezzanine.core.fields import FileField
-from mezzanine.core.models import Orderable, SiteRelated
+from mezzanine.core.models import Orderable, Displayable, SiteRelated
 from mezzanine.pages.models import Page
 from mezzanine.utils.models import upload_to
 
@@ -42,7 +42,7 @@ class Feature(Orderable):
 		'''
 		homepage = models.ForeignKey(HomePage, related_name='features')
 		image = FileField( verbose_name = _('Image'),
-											upload_to = upload_to('theme.Featured.image', 
+											upload_to = upload_to('theme.Feature.image', 
 																						'featured_images'),
 											format = 'Image',
 											max_length = 255, null = True, blank = True)
@@ -53,3 +53,12 @@ class Feature(Orderable):
 		caption_blurb = models.CharField (max_length = 100,
 																			default = 'Blurb for this featured image goes here.')
 
+		#need a way for the user to select a page to link to.
+
+class Testimonial(Orderable):
+	'''
+	Testimonials from happy clients
+	'''
+	homepage = models.ForeignKey(HomePage, related_name='testimonials')
+	testimonial_blurb = models.CharField (max_length = 60,
+																				default = 'Stuff')
